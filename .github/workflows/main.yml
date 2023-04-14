@@ -3,7 +3,7 @@ name: Create Windows executable
   # uses: JackMcKew/pyinstaller-action-windows@a8dee21ad01bbc7e7363d445bb632691b95ba057
 on:
   push:
-    branches: [master]
+    branches: [main]
   workflow_dispatch:
     
 jobs:
@@ -15,7 +15,7 @@ jobs:
       uses: JackMcKew/pyinstaller-action-windows@v0.1.2
       with:
         path: .
-    - uses: actions/uploadartifact@v2
+    - uses: actions/upload-artifact@v2
       with:
         name: RdsLogReader
         path: dist/loggui
